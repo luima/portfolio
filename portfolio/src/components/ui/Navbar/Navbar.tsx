@@ -1,7 +1,7 @@
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
-import images from "@/constants/images";
+import { images } from "@constants";
 import { FC, useState } from "react";
 
 function Navbar() {
@@ -13,11 +13,11 @@ function Navbar() {
       <div className="flex justify-start items-center">
         <img className="w-[90px] h-[20px]" src={images.logo} alt="logo" />
       </div>
-      <ul className="max-[900px]:hidden flex-1 flex justify-center items-center list-none">
+      <ul className="max-[900px]:hidden flex-1 flex-centered list-none">
         <MenuList menus={menus} onClick={() => setToggle(false)} />
       </ul>
 
-      <div className="min-[900px]:hidden w-[35px] h-[35px] rounded-full relative flex justify-center items-center bg-secondary">
+      <div className="min-[900px]:hidden w-[35px] h-[35px] rounded-full relative flex-centered bg-secondary">
         <HiMenuAlt4
           className="w-[70%] h-[70%] fill-white cursor-pointer"
           onClick={() => setToggle(true)}
@@ -54,7 +54,7 @@ const MenuList: FC<{
     <>
       {menus.map((item) => (
         <li
-          className="flex justify-center items-center text-gray leading-6 mx-4 my-0 cursor-pointer flex-col group"
+          className="flex-centered text-gray leading-6 mx-4 my-0 cursor-pointer flex-col group"
           key={`link-${item}`}
         >
           {small ? (

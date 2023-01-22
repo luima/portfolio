@@ -11,3 +11,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.flex-centered {
+  @apply flex justify-center items-center;
+}
+
+.paragraph {
+  @apply text-sm text-left text-gray leading-6 min-[2000px]:text-3xl;
+}
+
+.bold-text {
+  @apply text-base text-left text-black font-extrabold min-[2000px]:text-3xl max-[450px]:text-sm;
+}
+
+.heading {
+  @apply text-[2.75rem] text-center text-black font-extrabold capitalize min-[2000px]:text-[4rem] max-[450px]:text-[2rem];
+}
+
+.bubble {
+  @apply py-4 px-8 border-white rounded-2xl w-auto shadow-[0_0_20px_rgba(0,0,0,0.1)];
+}
