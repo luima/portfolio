@@ -3,7 +3,7 @@ import { About, Footer, Header, Skills, Testimonials, Work } from "./pages";
 
 function App() {
   return (
-    <div className="">
+    <div className="bg-primary">
       <Navbar />
       <Header />
       <About />
