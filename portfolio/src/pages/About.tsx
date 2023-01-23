@@ -1,30 +1,25 @@
+import { client, urlFor } from "@/client";
 import { images } from "@/constants";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const abouts = [
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    imgUrl: images.about01,
-  },
-  {
-    title: "FrontEnd Development",
-    description: "I am a good web developer",
-    imgUrl: images.about02,
-  },
-  {
-    title: "Backend Development",
-    description: "I am a good web developer",
-    imgUrl: images.about03,
-  },
-  {
-    title: "Animation Development",
-    description: "I am a good web developer",
-    imgUrl: images.about04,
-  },
-];
+interface AboutModel {
+  title: string;
+  description: string;
+  imgUrl: string;
+}
 
 function About() {
+  const [abouts, setAbouts] = useState<AboutModel[]>([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+
+    client.fetch(query).then((data) => {
+      setAbouts(data);
+    });
+  }, []);
+
   return (
     <>
       <h2 className="heading">
@@ -43,7 +38,7 @@ function About() {
             className="w-[190px] flex justify-start items-start flex-col m-8  min-[2000px]:w-[370px] min-[2000px]:mx-16 min-[2000px]:my-8"
           >
             <img
-              src={about.imgUrl}
+              src={urlFor(about.imgUrl)}
               alt={about.title}
               className="w-full h-[170px] rounded-[15px] object-cover min-[2000px]:w-[320px]"
             />
