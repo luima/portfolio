@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: [
-      { find: "@", replacement: path.resolve(__dirname, "src") },
       {
         find: "@ui",
         replacement: path.resolve(__dirname, "src/components/ui"),
@@ -14,6 +13,10 @@ export default defineConfig({
       {
         find: "@constants",
         replacement: path.resolve(__dirname, "src/constants"),
+      },
+      {
+        find: "@shared",
+        replacement: path.resolve(__dirname, "src/shared"),
       },
     ],
   },

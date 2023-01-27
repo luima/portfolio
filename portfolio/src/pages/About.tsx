@@ -1,5 +1,5 @@
-import { client, urlFor } from "@/client";
-import { images } from "@/constants";
+import { client, urlFor } from "../client";
+import { images } from "@constants";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
