@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 import { images } from "@constants";
-import { FC, useState } from "react";
+import MenuList from "./MenuList";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -44,35 +45,5 @@ function Navbar() {
     </nav>
   );
 }
-
-const MenuList: FC<{
-  menus: string[];
-  onClick: () => void;
-  small?: boolean;
-}> = ({ menus, onClick, small = false }) => {
-  return (
-    <>
-      {menus.map((item) => (
-        <li
-          className="flex-centered text-gray leading-6 mx-4 my-0 cursor-pointer flex-col group"
-          key={`link-${item}`}
-        >
-          {small ? (
-            <></>
-          ) : (
-            <div className="w-[5px] h-[5px] bg-transparent rounded-full mb-[5px] group-hover:bg-secondary " />
-          )}
-          <a
-            className="text-gray no-underline uppercase font-medium transition duration-300 ease-in-out hover:text-secondary"
-            href={`#${item}`}
-            onClick={onClick}
-          >
-            {item}
-          </a>
-        </li>
-      ))}
-    </>
-  );
-};
 
 export default Navbar;
