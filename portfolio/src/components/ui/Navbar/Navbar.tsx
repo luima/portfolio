@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 import { images } from "@constants";
 import MenuList from "./MenuList";
+import menus from "@constants/menus";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
-  const menus = ["home", "about", "work", "skills", "testimonials", "contact"];
 
   return (
     <nav className="w-full fixed z-[2] flex justify-between items-center px-4 py-8 bg-white bg-opacity-25 backdrop-blur-sm border border-white border-opacity-25">

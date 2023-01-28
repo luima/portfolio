@@ -2,6 +2,7 @@ import { client, urlFor } from "../client";
 import { images } from "@constants";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { withAddons } from "@shared/addon-hoc";
 
 interface AboutModel {
   title: string;
@@ -35,12 +36,12 @@ function About() {
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
-            className="w-[190px] flex justify-start items-start flex-col m-8  min-[2000px]:w-[370px] min-[2000px]:mx-16 min-[2000px]:my-8"
+            className="w-[190px] flex justify-start items-start flex-col m-8  2xl:w-[370px] 2xl:mx-16 2xl:my-8"
           >
             <img
               src={urlFor(about.imgUrl)}
               alt={about.title}
-              className="w-full h-[170px] rounded-[15px] object-cover min-[2000px]:w-[320px]"
+              className="w-full h-[170px] rounded-[15px] object-cover 2xl:w-[320px]"
             />
             <h2 className="bold-text mt-5">{about.title}</h2>
             <p className="paragraph mt-3">{about.description}</p>
@@ -51,4 +52,4 @@ function About() {
   );
 }
 
-export default About;
+export default withAddons(About, "about");
