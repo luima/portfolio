@@ -16,12 +16,12 @@
   @apply flex justify-center items-center;
 }
 
-.paragraph {
-  @apply text-sm text-left text-gray leading-6 2xl:text-3xl;
+.paragraph text-gray {
+  @apply text-sm text-left leading-6 2xl:text-3xl;
 }
 
 .bold-text {
-  @apply text-base text-left text-black font-extrabold 2xl:text-3xl max-[450px]:text-sm;
+  @apply text-base text-black font-extrabold 2xl:text-3xl max-[450px]:text-sm;
 }
 
 .heading {
