@@ -4,6 +4,7 @@ import { urlFor, client } from "../client";
 import { useEffect, useState } from "react";
 import ReactTooltip from "react-tooltip";
 import React from "react";
+import { withMotion } from "@shared/motion-hoc";
 
 interface SkillsModel {
   name: string;
@@ -53,7 +54,7 @@ function Skills() {
               className="flex-centered flex-col text-center m-4 transition-all durtion-300 ease-in-out 2xl:my-2 2xl:mx-4"
             >
               <div
-                className={`flex-centered ${skill.bgColor} w-24 h-24 rounded-full bg-white hover:shadow-[0_0_25px_#fef4f5] 2xl:w-36 2xl:h-36 sm:w-16 sm:h-16`}
+                className={`flex-centered bg-lightGray w-24 h-24 rounded-full  hover:shadow-[0_0_25px_#fef4f5] 2xl:w-36 2xl:h-36 sm:w-16 sm:h-16`}
               >
                 <img
                   className="w-3/6 h-3/6"
@@ -115,4 +116,4 @@ function Skills() {
   );
 }
 
-export default withAddons(Skills, "skills");
+export default withAddons(withMotion(Skills, ""), "skills", "bg-white");

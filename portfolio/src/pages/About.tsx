@@ -3,6 +3,7 @@ import { images } from "@constants";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { withAddons } from "@shared/addon-hoc";
+import { withMotion } from "@shared/motion-hoc";
 
 interface AboutModel {
   title: string;
@@ -39,7 +40,7 @@ function About() {
             className="w-[190px] flex justify-start items-start flex-col m-8  2xl:w-[370px] 2xl:mx-16 2xl:my-8"
           >
             <img
-              src={urlFor(about.imgUrl)}
+              src={urlFor(about.imgUrl).toString()}
               alt={about.title}
               className="w-full h-[170px] rounded-[15px] object-cover 2xl:w-[320px]"
             />
@@ -52,4 +53,4 @@ function About() {
   );
 }
 
-export default withAddons(About, "about");
+export default withAddons(withMotion(About, "flex-col"), "about", "bg-white");

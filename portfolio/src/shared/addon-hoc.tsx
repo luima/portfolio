@@ -7,7 +7,8 @@ interface WithAddonsProps {
 
 export function withAddons<T extends WithAddonsProps = WithAddonsProps>(
   WrappedComponent: React.ComponentType<T>,
-  name: string
+  name: string,
+  classNames: string
 ) {
   const displayName =
     WrappedComponent.displayName || WrappedComponent.name || "Component";
@@ -18,7 +19,7 @@ export function withAddons<T extends WithAddonsProps = WithAddonsProps>(
       <div
         id={name}
         className={`w-full h-full flex flex-row ${
-          props.className ? props.className : ""
+          props.className ? props.className : classNames
         }`}
       >
         <SocialMedia />

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { withAddons } from "@shared/addon-hoc";
 import { urlFor, client } from "../client";
 import { useEffect, useState } from "react";
+import { withMotion } from "@shared/motion-hoc";
 
 interface WorkModel {
   name: string;
@@ -133,4 +134,4 @@ function Work() {
   );
 }
 
-export default withAddons(Work, "work");
+export default withAddons(withMotion(Work, ""), "work", "bg-primary");
