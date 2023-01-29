@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { images } from "@constants";
-import { withAddons } from "@shared/addon-hoc";
+import { withAddons } from "@shared/index";
 
 const scaleVariants = {
   whileInView: {
@@ -82,4 +82,4 @@ function Header() {
   );
 }
 
-export default withAddons(Header, "home");
+export default withAddons(Header, "home", "");

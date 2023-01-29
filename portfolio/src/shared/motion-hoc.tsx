@@ -5,7 +5,7 @@ interface WithMotionProps {
   className: string;
 }
 
-export function withMotion<T extends WithMotionProps = WithMotionProps>(
+export default function withMotion<T extends WithMotionProps = WithMotionProps>(
   WrappedComponent: React.ComponentType<T>,
   classNames: string
 ) {

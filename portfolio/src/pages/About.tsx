@@ -1,9 +1,7 @@
 import { client, urlFor } from "../client";
-import { images } from "@constants";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { withAddons } from "@shared/addon-hoc";
-import { withMotion } from "@shared/motion-hoc";
+import { withAddons, withMotion } from "@shared/index";
 
 interface AboutModel {
   title: string;

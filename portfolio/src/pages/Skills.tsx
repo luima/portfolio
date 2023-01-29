@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { withAddons } from "@shared/addon-hoc";
 import { urlFor, client } from "../client";
 import { useEffect, useState } from "react";
 import ReactTooltip from "react-tooltip";
 import React from "react";
-import { withMotion } from "@shared/motion-hoc";
+import { withMotion, withAddons } from "@shared/index";
 
 interface SkillsModel {
   name: string;

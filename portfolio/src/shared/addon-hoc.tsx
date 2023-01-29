@@ -5,7 +5,7 @@ interface WithAddonsProps {
   className: string;
 }
 
-export function withAddons<T extends WithAddonsProps = WithAddonsProps>(
+export default function withAddons<T extends WithAddonsProps = WithAddonsProps>(
   WrappedComponent: React.ComponentType<T>,
   name: string,
   classNames: string
