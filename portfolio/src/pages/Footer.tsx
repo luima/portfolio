@@ -4,4 +4,4 @@ function Footer() {
   return <div>Footer</div>;
 }
 
-export default withAddons(withMotion(Footer, ""), "contact", "");
+export default withAddons(withMotion(Footer, ""), "contact", "bg-white");
