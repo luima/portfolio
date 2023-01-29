@@ -4,12 +4,22 @@ import { withAddons } from "@shared/addon-hoc";
 import { urlFor, client } from "../client";
 import { useEffect, useState } from "react";
 
+interface WorkModel {
+  name: string;
+  title: string;
+  description: string;
+  imgUrl: string;
+  projectLink: string;
+  codeLink: string;
+  tags: string[];
+}
+
 function Work() {
   const categories = ["Web App", "Mobile", "React JS", "All"];
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filter, setFilter] = useState("All");
-  const [works, setWorks] = useState([]);
-  const [filteredWorks, setFilteredWorks] = useState([]);
+  const [works, setWorks] = useState<WorkModel[]>([]);
+  const [filteredWorks, setFilteredWorks] = useState<WorkModel[]>([]);
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -66,7 +76,7 @@ function Work() {
             <div className="flex-centered w-full h-72  2xl:h-96 relative">
               <img
                 className="w-full h-full rounded-lg object-cover"
-                src={urlFor(work.imgUrl)}
+                src={urlFor(work.imgUrl).toString()}
                 alt={work.name}
               />
               <motion.div
