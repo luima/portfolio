@@ -25,12 +25,12 @@ function Header() {
           <div className="bubble flex-row flex-centered">
             <span className="text-5xl 2xl:text-8xl">👋</span>
             <div className="ml-[20px]">
-              <p className="paragraph">Hello, I am</p>
+              <p className="paragraph text-gray">Hello, I am</p>
               <h1 className="heading">Luis</h1>
             </div>
           </div>
           <div className="flex-centered bubble flex-col mt-8">
-            <p className="paragraph uppercase w-full text-right">
+            <p className="paragraph text-gray uppercase w-full text-right">
               Full Stack Developer
             </p>
           </div>

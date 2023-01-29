@@ -44,7 +44,7 @@ function About() {
               className="w-full h-[170px] rounded-[15px] object-cover 2xl:w-[320px]"
             />
             <h2 className="bold-text mt-5">{about.title}</h2>
-            <p className="paragraph mt-3">{about.description}</p>
+            <p className="paragraph text-gray mt-3">{about.description}</p>
           </motion.div>
         ))}
       </div>

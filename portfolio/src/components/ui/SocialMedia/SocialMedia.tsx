@@ -8,7 +8,7 @@ const SocialMedia = () => {
       {socialMediaIcons.map((icon, index) => (
         <div
           key={index}
-          className={`w-10 w- h-10 rounded-full bg-white my-1 mx-0 border border-solid border-lightGray flex justify-center items-center
+          className={`w-10 w- h-10 rounded-full bg-white my-1 mx-0 border border-solid border-lightGray flex-centered
             hover:bg-secondary hover:border-secondary
             transition-all ease-in-out duration-300
             2xl:w-20 2xl:h-20 2xl:m-2`}
