@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { images } from "@constants";
+import { images } from "@constants/index";
 import { withAddons } from "@shared/index";
 
 const scaleVariants = {
