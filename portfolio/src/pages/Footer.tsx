@@ -82,6 +82,7 @@ function Footer() {
               placeholder="Your Name"
               name="name"
               value={name}
+              autoComplete="off"
               onChange={handleChangeInput}
             />
           </div>
@@ -92,6 +93,7 @@ function Footer() {
               placeholder="Your Email"
               name="email"
               value={email}
+              autoComplete="off"
               onChange={handleChangeInput}
             />
           </div>
@@ -102,6 +104,7 @@ function Footer() {
               value={message}
               name="message"
               onChange={handleChangeInput}
+              autoComplete="off"
             />
           </div>
           <button

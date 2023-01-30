@@ -18,7 +18,7 @@ export default function withAddons<T extends WithAddonsProps = WithAddonsProps>(
     return (
       <div
         id={name}
-        className={`w-full h-full flex flex-row ${
+        className={`w-full min-h-screen flex flex-row ${
           props.className ? props.className : classNames
         }`}
       >

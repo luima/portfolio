@@ -51,4 +51,8 @@ function About() {
   );
 }
 
-export default withAddons(withMotion(About, "flex-col"), "about", "bg-white");
+export default withAddons(
+  withMotion(About, "flex-1 w-full flex-col"),
+  "about",
+  "bg-white"
+);

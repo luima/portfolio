@@ -31,7 +31,7 @@ function Header() {
           </div>
           <div className="flex-centered bubble flex-col mt-8">
             <p className="paragraph text-gray uppercase w-full text-right">
-              Full Stack Developer
+              FrontEnd Developer
             </p>
           </div>
         </div>
@@ -61,10 +61,11 @@ function Header() {
               max-[1200px]:w-full max-[1200px]:flex-row max-[1200px]:flex-wrap max-[1200px]:ml-0
         "
       >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
-          <div
-            key={index}
-            className={`flex-centered w-[100px] h-[100px] rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.1)] 
+        {[images.redux, images.react, images.typescript].map(
+          (circle, index) => (
+            <div
+              key={index}
+              className={`flex-centered w-[100px] h-[100px] rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.1)] 
               first:w-[120px] first:h-[120px] 
               even:m-5 even:w-[150px] even:h-[150px] 
               last:w-[90px] last:h-[90px]
@@ -73,10 +74,11 @@ function Header() {
               2xl:last:w-[120px] 2xl:last:h-[120px]
               max-[1200px]:m-4
             `}
-          >
-            <img src={circle} alt="techs" className="w-[60%] h-[60%]" />
-          </div>
-        ))}
+            >
+              <img src={circle} alt="techs" className="w-[60%] h-[60%]" />
+            </div>
+          )
+        )}
       </motion.div>
     </div>
   );
