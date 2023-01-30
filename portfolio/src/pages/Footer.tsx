@@ -49,7 +49,7 @@ function Footer() {
     <div className="flex-1 w-full flex-col">
       <h2 className="heading">Take a coffee & chat with me</h2>
 
-      <div className="w-full flex justify-evenly items-center flex-wrap mt-16 mx-8 mb-8 max-[768px]:w-full">
+      <div className="w-full flex justify-evenly items-center flex-wrap mt-16 mb-8 max-[768px]:w-full">
         <div className="min-w-[290px] flex flex-row justify-start items-center my-2 mx-0 p-4 rounded-xl cursor-pointer bg-lightGray transition-all duration-300 ease-in-out max-[450px]:w-full shadow-[0_0_25px_#fef4f5]">
           <img src={images.email} alt="email" className="w-10 h-10 my-0 mx-3" />
           <a
@@ -74,7 +74,7 @@ function Footer() {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div className="w-full flex-centered flex-col my-4 mx-8">
+        <div className="w-full flex-centered flex-col my-4">
           <div className="flex-centered w-full my-3 mx-0 rounded-xl cursor-pointer bg-primary transition-all duration-300 ease-in-out">
             <input
               className="paragraph w-full p-4 border-none rounded-lg bg-primary text-secondary outline-0 hover:shadow-[0_0_25px_#fff]"

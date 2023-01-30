@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <nav className="w-full fixed z-[2] flex justify-between items-center px-4 py-8 bg-white bg-opacity-25 backdrop-blur-sm border border-white border-opacity-25">
       <div className="flex justify-start items-center">
-        <img className="w-[90px] h-[20px]" src={images.logo} alt="logo" />
+        <img className="w-[90px] h-[90px]" src={images.logo} alt="logo" />
       </div>
       <ul className="max-[900px]:hidden flex-1 flex-centered list-none">
         <MenuList menus={menus} onClick={() => setToggle(false)} />
