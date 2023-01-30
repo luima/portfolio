@@ -16,7 +16,7 @@
   @apply flex justify-center items-center;
 }
 
-.paragraph text-gray {
+.paragraph {
   @apply text-sm text-left leading-6 2xl:text-3xl;
 }
 

@@ -15,7 +15,7 @@ const scaleVariants = {
 
 function Header() {
   return (
-    <div className="flex-centered relative bg-[url(../../assets/bgIMG.png)] bg-cover bg-repeat bg-center flex-1 w-full h-full flex-row pt-32 px-8 pb-0 2xl:pt-40 max-[1200px]:flex-col max-[450px]:pt-24 max-[450px]:px-4 max-[450px]:pb-8">
+    <div className="flex-centered flex-1 w-full h-full flex-row pt-32 px-8 pb-0 2xl:pt-40 max-[1200px]:flex-col max-[450px]:pt-24 max-[450px]:px-4 max-[450px]:pb-8">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -82,4 +82,8 @@ function Header() {
   );
 }
 
-export default withAddons(Header, "home", "");
+export default withAddons(
+  Header,
+  "home",
+  "relative bg-[url(../../assets/bgIMG.png)] bg-cover bg-repeat bg-center"
+);
